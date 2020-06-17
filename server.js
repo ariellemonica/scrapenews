@@ -10,6 +10,18 @@ var PORT = 3030;
 
 var app = express();
 
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
+app.use(logger("dev"));
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect(MONGODB_URI);
+
+// ROUTES
+app.get("/", function(req,res){
+    //do a thing
+    console.log("I did a thing!")
+});
 
 
 

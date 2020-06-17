@@ -75,5 +75,5 @@ app.get("articles/:id", function(req,res){
 
 // always have this and always have it at the bottom
 app.listen(PORT, function () {
-    console.log("Apps and a bottle of port: ", PORT)
+    console.log("Apps and a bottle of port: " + PORT)
 })
